@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "proto/service";
+package service;
+
+service UidGenerate {
+    rpc UidGenerate (UidRequest) returns (UidResponse) {}
+}
+
+message UidRequest {
+    string user1 = 1;
+    string user2 = 2;
+}
+
+message UidResponse {
+    string message = 1;
+}
